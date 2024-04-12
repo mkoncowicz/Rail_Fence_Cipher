@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rail Fence Cipher</title>
+        <style>
+            /* Style for the form containers */
+            .form-container {
+                margin-bottom: 20px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main Heading of the Page -->
+        <h1>Rail Fence Cipher Application</h1>
+
+        <!-- Encryption Form Section -->
+        <div class="form-container">
+            <h2>Encryption</h2>
+            <!-- Form for submitting text to be encrypted -->
+            <!-- The form sends a POST request to EncryptServlet -->
+            <form action="EncryptServlet" method="POST">
+                Text to Encrypt: <input type="text" name="inputText" required><br>
+                Number of Rails: <input type="number" name="rails" required><br>
+                <input type="submit" value="Encrypt">
+            </form>
+        </div>
+
+        <!-- Decryption Form Section -->
+        <div class="form-container">
+            <h2>Decryption</h2>
+            <!-- Form for submitting text to be decrypted -->
+            <!-- The form sends a POST request to DecryptServlet -->
+            <form action="DecryptServlet" method="POST">
+                Text to Decrypt: <input type="text" name="inputText" required><br>
+                Number of Rails: <input type="number" name="rails" required><br>
+                <input type="submit" value="Decrypt">
+            </form>
+        </div>
+
+        <!-- History Display Section -->
+        <div class="form-container">
+            <!-- Link to view the history of operations -->
+            <!-- Sends a GET request to DisplayHistoryServlet -->
+            <form action="DisplayHistoryServlet" method="GET">
+                <input type="submit" value="Display History">
+            </form>
+        </div>
+    </body>
+</html>
